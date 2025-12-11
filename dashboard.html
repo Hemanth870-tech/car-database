@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Database Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>🚗 Car Database Dashboard</h1>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+        
+        <div class="stats">
+            <h2>Total Cars: ${carData.length}</h2>
+            <p>Browse through our collection of premium cars</p>
+        </div>
+        
+        <div id="carsContainer" class="cars-grid">
+            <!-- Cars will be loaded here by JavaScript -->
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
