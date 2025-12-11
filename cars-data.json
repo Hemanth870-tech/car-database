@@ -1,0 +1,36 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "name": "BMW M5",
+      "engine": "4.4L V8 Twin-Turbo",
+      "topSpeed": "305 km/h",
+      "country": "Germany",
+      "description": "High-performance luxury sedan"
+    },
+    {
+      "id": 2,
+      "name": "Tesla Model S",
+      "engine": "Dual Electric Motors",
+      "topSpeed": "322 km/h",
+      "country": "USA",
+      "description": "All-electric luxury sedan"
+    },
+    {
+      "id": 3,
+      "name": "Tata Nexon EV",
+      "engine": "Permanent Magnet AC Motor",
+      "topSpeed": "120 km/h",
+      "country": "India",
+      "description": "Compact electric SUV"
+    },
+    {
+      "id": 4,
+      "name": "Mahindra Thar",
+      "engine": "2.0L mStallion Turbo Petrol",
+      "topSpeed": "155 km/h",
+      "country": "India",
+      "description": "Off-road SUV"
+    }
+  ]
+}
