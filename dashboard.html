@@ -9,20 +9,36 @@
 <body>
     <div class="dashboard">
         <div class="header">
-            <h1>🚗 Car Database Dashboard</h1>
+            <h1>🚗 Premium Car Database</h1>
             <button onclick="logout()" class="logout-btn">Logout</button>
         </div>
         
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search cars by name, country, engine, or price...">
+                <button id="searchButton">Search</button>
+            </div>
+            <p id="resultCount" class="result-count">Showing 11 cars</p>
+        </div>
+        
         <div class="stats">
-            <h2>Total Cars: ${carData.length}</h2>
-            <p>Browse through our collection of premium cars</p>
+            <h2>Total Cars: <span id="totalCars">11</span></h2>
+            <p>Browse through our collection of premium cars from around the world</p>
         </div>
         
         <div id="carsContainer" class="cars-grid">
             <!-- Cars will be loaded here by JavaScript -->
         </div>
+        
+        <div class="footer">
+            <p>Car Database System | Total Cars: 11 | Updated: December 2024</p>
+        </div>
     </div>
     
     <script src="script.js"></script>
+    <script>
+        // Set total cars count
+        document.getElementById('totalCars').textContent = '11';
+    </script>
 </body>
 </html>
