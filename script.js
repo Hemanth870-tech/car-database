@@ -53,7 +53,7 @@ const carData = [
         engine: "Permanent Magnet AC Motor",
         topSpeed: "120 km/h",
         country: "India",
-        image: "https://images.unsplash.com/photo-1563720223488-8f2f62a6e71a?w=600&h=400&fit=crop"
+        image: "https://images.pexels.com/photos/17395382/pexels-photo-17395382.jpeg"
     },
     {
         name: "Mahindra Thar",
@@ -74,7 +74,7 @@ const carData = [
         engine: "3.0L Inline-6 Turbo",
         topSpeed: "250 km/h",
         country: "Japan",
-        image: "https://images.unsplash.com/photo-1617650728462-2479c4eab7e2?w=600&h=400&fit=crop"
+        image: "https://images.pexels.com/photos/13627440/pexels-photo-13627440.jpeg"
     }
 ];
 
