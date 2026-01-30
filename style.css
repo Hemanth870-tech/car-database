@@ -175,15 +175,15 @@ button:hover {
     text-align: center;
 }
 
-/* Main search container - minimized as requested */
+/* Main search container */
 .search-container {
     display: inline-flex;
     background: white;
     border-radius: 50px;
-    padding: 8px 15px;
+    padding: 5px;
     border: 2px solid #ddd;
     transition: all 0.3s;
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
     margin: 0 auto;
 }
@@ -197,44 +197,47 @@ button:hover {
 .search-box {
     display: flex;
     align-items: center;
-    gap: 10px;
     width: 100%;
+    gap: 5px;
 }
 
-/* Search input - white background for visibility */
+/* Search input - LARGE typing area */
 .search-box input {
     flex: 1;
-    padding: 10px;
+    padding: 12px 20px;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     width: 100%;
-    color: #333;               /* FIX: Visible text color */
-    background: transparent;   /* Transparent to show white container */
-    font-family: 'Arial', sans-serif; /* FIX: Font */
+    color: #333;
+    background: white;
+    font-family: 'Arial', sans-serif;
+    min-width: 300px;
 }
 
 .search-box input::placeholder {
-    color: #888;               /* FIX: Placeholder color */
+    color: #888;
 }
 
 .search-box input:focus {
     outline: none;
-    box-shadow: none;          /* Removed as container handles it */
+    box-shadow: none;
 }
 
-/* Search button - minimized */
+/* Search button - SMALL/COMPACT */
 .search-box button {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 10px 15px;
+    border-radius: 50px;
     cursor: pointer;
     font-weight: bold;
     transition: all 0.3s;
     white-space: nowrap;
     font-size: 14px;
+    min-width: 80px;
+    flex-shrink: 0; /* Don't shrink button */
 }
 
 .search-box button:hover {
@@ -242,11 +245,13 @@ button:hover {
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
-/* Search icon (optional) */
+/* Search icon */
 .search-icon {
     color: #667eea;
-    margin-right: 5px;
-    font-size: 16px;
+    margin: 0 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
 }
 
 .result-count {
@@ -256,50 +261,23 @@ button:hover {
     margin-top: 15px;
 }
 
-/* Car Card Updates */
-.price-tag {
-    color: #28a745;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.no-results {
-    text-align: center;
-    grid-column: 1 / -1;
-    padding: 40px;
-    color: #666;
-    font-size: 18px;
-}
-
-/* Footer */
-.footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-    text-align: center;
-    color: #666;
-    font-size: 14px;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .search-container {
         max-width: 100%;
-        padding: 6px 12px;
-    }
-    
-    .search-box {
-        flex-direction: row; /* Keep row layout on mobile */
+        padding: 4px;
     }
     
     .search-box input {
+        padding: 10px 15px;
         font-size: 14px;
-        padding: 8px;
+        min-width: auto;
     }
     
     .search-box button {
-        padding: 8px 16px;
+        padding: 8px 12px;
         font-size: 13px;
+        min-width: 70px;
     }
     
     .cars-grid {
