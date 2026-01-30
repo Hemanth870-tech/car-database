@@ -172,24 +172,45 @@ button:hover {
     border-radius: 10px;
     margin-bottom: 25px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
+/* Main search container - minimized as requested */
+.search-container {
+    display: inline-flex;
+    background: white;
+    border-radius: 50px;
+    padding: 8px 15px;
+    border: 2px solid #ddd;
+    transition: all 0.3s;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.search-container:focus-within {
+    border-color: #667eea;
+    box-shadow: 0 0 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Search box inside container */
 .search-box {
     display: flex;
+    align-items: center;
     gap: 10px;
-    margin-bottom: 10px;
+    width: 100%;
 }
 
+/* Search input - white background for visibility */
 .search-box input {
     flex: 1;
-    padding: 12px 15px;
-    border: 2px solid #667eea;
+    padding: 10px;
+    border: none;
     border-radius: 8px;
     font-size: 16px;
-    transition: all 0.3s;
-    width: 100%;                /* FIX: Full width */
+    width: 100%;
     color: #333;               /* FIX: Visible text color */
-    background: white;         /* FIX: White background */
+    background: transparent;   /* Transparent to show white container */
     font-family: 'Arial', sans-serif; /* FIX: Font */
 }
 
@@ -199,29 +220,40 @@ button:hover {
 
 .search-box input:focus {
     outline: none;
-    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+    box-shadow: none;          /* Removed as container handles it */
 }
 
+/* Search button - minimized */
 .search-box button {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border: none;
-    padding: 12px 30px;
-    border-radius: 8px;
+    padding: 10px 20px;
+    border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
-    transition: transform 0.3s;
-    white-space: nowrap;       /* FIX: Button text on one line */
+    transition: all 0.3s;
+    white-space: nowrap;
+    font-size: 14px;
 }
 
 .search-box button:hover {
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Search icon (optional) */
+.search-icon {
+    color: #667eea;
+    margin-right: 5px;
+    font-size: 16px;
 }
 
 .result-count {
     color: #666;
     font-size: 14px;
     text-align: center;
+    margin-top: 15px;
 }
 
 /* Car Card Updates */
@@ -251,12 +283,23 @@ button:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+        padding: 6px 12px;
+    }
+    
     .search-box {
-        flex-direction: column;
+        flex-direction: row; /* Keep row layout on mobile */
+    }
+    
+    .search-box input {
+        font-size: 14px;
+        padding: 8px;
     }
     
     .search-box button {
-        width: 100%;
+        padding: 8px 16px;
+        font-size: 13px;
     }
     
     .cars-grid {
