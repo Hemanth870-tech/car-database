@@ -13,10 +13,14 @@
             <button onclick="logout()" class="logout-btn">Logout</button>
         </div>
         
+        <!-- UPDATED: This is the NEW search bar structure -->
         <div class="search-section">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Search cars by name, country, engine, or price...">
-                <button id="searchButton">Search</button>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" placeholder="Search cars by name, country, engine, or price...">
+                    <button id="searchButton">Search</button>
+                </div>
             </div>
             <p id="resultCount" class="result-count">Showing 11 cars</p>
         </div>
@@ -36,9 +40,5 @@
     </div>
     
     <script src="script.js"></script>
-    <script>
-        // Set total cars count
-        document.getElementById('totalCars').textContent = '11';
-    </script>
 </body>
 </html>
